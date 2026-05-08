@@ -1,0 +1,12 @@
+# Note: Netlify is for static sites and serverless functions. 
+# This backend contains a persistent Node.js server with WhatsApp-Web.js 
+# which requires a long-running process and cannot run on Netlify.
+# This config will only host the static files in the 'web' folder.
+
+[build]
+  publish = "web"
+
+[[redirects]]
+  from = "/referral/*"
+  to = "/referral.html"
+  status = 200
